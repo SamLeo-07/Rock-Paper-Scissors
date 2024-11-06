@@ -30,14 +30,15 @@ function playRound(){
   const compChoice = getComputersChoice();
   const player = getPlayerChoice();
   if (compChoice === player) {
-    console.log("it's a tie!" + " " + "Computer chose " + compChoice + " " + "and you chose " + player);
+    alert("it's a tie!" + " " + "Computer chose " + compChoice + " " + "and you chose " + player);
     return  "tie";
   }  else if (
      (compChoice === "rock" && player === "paper") ||
-  (compChoice === "paper" && player === "scissors") || (compChoice === "scissors" && player === "rock")) { console.log("you win!" + " you choose " + player + " " + "Computer chose " + compChoice); 
+  (compChoice === "paper" && player === "scissors") || (compChoice === "scissors" && player === "rock")) { 
+    alert("you win!" + " you choose " + player + " " + "Computer chose " + compChoice); 
   return "player";
 }  else {
-  console.log("you lose!" + " " + "you choose " + player + " " + "Computer chose " + compChoice);
+  alert("you lose!" + " " + "you choose " + player + " " + "Computer chose " + compChoice);
   return "computer";
 }
 }
@@ -55,13 +56,13 @@ for(let i = 0; i < times; i++){
     } else if (roundResult === "tie") { 
     i--; 
     }
-    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore);
 
   if (playerScore === 3) {
-    console.log("You win the game!");
+    alert("You win the game!");
     break;
   } else if (computerScore === 3){
-    console.log("You lose the game!");
+    alert("You lose the game!");
     break;
   }
 }
